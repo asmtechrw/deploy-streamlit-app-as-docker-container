@@ -34,7 +34,7 @@ streamlit run app.py
 5. Build Docker image from the project directory:
 
 ```commandline
-sudo docker build -t Image_name:tag .
+sudo docker build -f Dockerfile -t streamlit_app:latest .
 ```
 
 ### (Note: Rerun the Docker build command if you want to make any changes to the code files and redeploy.)
@@ -53,7 +53,7 @@ $ sudo docker images
 
 7. Start a container:
 ```commandline
-sudo docker run -p 80:80 Image_ID
+sudo docker run -d --restart unless-stopped --name stream_app -p 80:80 streamlit_app:latest
 ```
 
 8. This will display the URL to access the Streamlit app (http://0.0.0.0:80). Note that this URL may not work on Windows. For Windows, go to http://localhost/.
