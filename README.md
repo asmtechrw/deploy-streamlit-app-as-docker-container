@@ -10,29 +10,19 @@ pip3 install -r requirements.txt
 
 
 2. Test the streamlit app on local:
-
 ```
 streamlit run app.py
 ```
-
-
 ### Building the docker image
 
-(Note: Run as administrator on Windows and remove "sudo" in commands)
-
-3. Important - Make sure you have installed Docker on your PC:
-- Linux: Docker
-- Windows/Mac: Docker Desktop
+3. Important - Make sure you have installed Docker on Ubuntu 22.04
 
 4. Start Docker:
 - Linux (Home Directory):
   ```
   sudo systemctl start docker
   ```
-- Windows: You can start Docker engine from Docker Desktop.
-
 5. Build Docker image from the project directory:
-
 ```commandline
 sudo docker build -f Dockerfile -t streamlit_app:latest .
 ```
@@ -41,7 +31,7 @@ sudo docker build -f Dockerfile -t streamlit_app:latest .
 
 ### Running the container & removing it
 
-6. witch to Home Directory:
+6. which to Home Directory:
 
 ```
 cd ~
